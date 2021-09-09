@@ -1,4 +1,0 @@
-- name: change default editor to nano (avoid nano)
-  become: true
-  become_user: root
-  shell: "update-alternatives --install /usr/bin/editor editor `which nano` 100"
