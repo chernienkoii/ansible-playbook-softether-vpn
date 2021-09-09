@@ -1,2 +1,2 @@
 [vpn]
-your-server-host # <= Change to the Host or IP address of your server!
+vpn ansible_host=10.1.100.36
