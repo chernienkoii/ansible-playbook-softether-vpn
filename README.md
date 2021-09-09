@@ -10,7 +10,7 @@ see **[SoftEther VPN Project](https://www.softether.org)**
 
 ### Server requirement
 
-- OS: Ubuntu 18.04
+- OS: Ubuntu 20.04
 
 
 ## Usage
@@ -19,8 +19,7 @@ see **[SoftEther VPN Project](https://www.softether.org)**
     ```
     vi ./hosts
     ```
-    You should change `your-server-host` to your **[Host](http://man7.org/linux/man-pages/man5/ssh_config.5.html)**
-    
+    You should change `your-server-host` to your     
 2. Deploy
     ```sh
     ansible-playbook -i hosts vpn.yml
