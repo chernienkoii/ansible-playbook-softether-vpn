@@ -1,4 +1,4 @@
-- hosts: sevpn
+- hosts: bastion
   vars_files:
     - group_vars/vars.yml
   roles:
