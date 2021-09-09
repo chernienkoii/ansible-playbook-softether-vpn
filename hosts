@@ -1,2 +1,2 @@
 [bastion]
-bastion ansible_host=10.1.100.36
+10.1.100.36
