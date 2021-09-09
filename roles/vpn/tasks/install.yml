@@ -21,4 +21,3 @@
   become_user: root
   make:
     chdir: "{{ softether_dir }}"
-#    target: i_read_and_agree_the_license_agreement

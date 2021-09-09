@@ -12,7 +12,7 @@
   become_user: root
   command: >
     {{ softether_dir }}/vpncmd /SERVER 127.0.0.1 /ADMINHUB:default /CMD
-    IPsecEnable /L2TP:yes /L2TPRAW:no /ETHERIP:no /PSK:{{ vpn_shared_pass }} /DEFAULTHUB:default
+    IPsecEnable /L2TP:no /L2TPRAW:no /ETHERIP:no /DEFAULTHUB:default
 
 - name: additional settings
   become: true
@@ -22,3 +22,4 @@
     - SecureNatEnable
     - NatEnable
     - DHCPEnable
+    - DhcpSet /START:{{ start_ip }} /END:{{ end_ip }} /MASK:{{ netmask }} /EXPIRE:{{ lease }}  /GW:{{ gateway }} /DNS:{{ dns }} /DNS2:{{ dns2 }} /DOMAIN:{{ domain }} /LOG:{{ log }} /PUSHROUTE:{{ route_to_hcintnetwork }}
