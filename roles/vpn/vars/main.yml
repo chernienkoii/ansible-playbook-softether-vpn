@@ -3,6 +3,7 @@ vpnserver_src: https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/down
 
 vpn_user: test_user
 vpn_pass: test_password
+vpn_shared_pass: test1234
 start_ip: 192.168.30.1
 end_ip: 192.168.30.50
 netmask: 255.255.255.0

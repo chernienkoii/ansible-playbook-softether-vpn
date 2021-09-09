@@ -12,7 +12,7 @@
   become_user: root
   command: >
     {{ softether_dir }}/vpncmd /SERVER 127.0.0.1 /ADMINHUB:default /CMD
-    IPsecEnable /L2TP:yes /L2TPRAW:no /ETHERIP:no /DEFAULTHUB:default
+    IPsecEnable /L2TP:yes /L2TPRAW:no /ETHERIP:no /PSK:{{ vpn_shared_pass }} /DEFAULTHUB:default
 
 - name: additional settings
   become: true
