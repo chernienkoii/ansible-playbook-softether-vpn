@@ -5,4 +5,5 @@
     name:
       - build-essential
       - make
+      - libc6-dev
     state: latest
