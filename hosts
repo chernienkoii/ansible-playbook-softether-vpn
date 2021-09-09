@@ -1,2 +1,2 @@
 [sevpn]
-sevpn ansible_host=10.1.100.36
+sevpn1 ansible_host=10.1.100.36
