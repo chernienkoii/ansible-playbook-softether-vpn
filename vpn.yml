@@ -1,7 +1,6 @@
-- hosts: sevpn
+- hosts: vpn
   vars_files:
     - group_vars/vpn.yml
     - vars/vpn_vars.yml
   roles:
-    - apt
-    - vpn
+    - ansible-role-vpn
