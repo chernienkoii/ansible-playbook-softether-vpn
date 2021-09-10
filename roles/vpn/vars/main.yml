@@ -3,9 +3,11 @@ vpnserver_src: https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/down
 
 
 users:
-  - vpn_user: test_user
+  - name: test_user
+    vpn_user: test_user
     vpn_pass: test_password
-  - vpn_user: test_user2
+  - name: test_user
+    vpn_user: test_user2
     vpn_pass: test_password
 
 #vpn_user: test_user
