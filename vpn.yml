@@ -1,6 +1,7 @@
 - hosts: sevpn
   vars_files:
-    - group_vars/vars.yml
+    - group_vars/vpn.yml
+    - vars/vpn_vars.yml
   roles:
     - apt
     - vpn
