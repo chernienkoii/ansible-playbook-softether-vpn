@@ -1,11 +1,24 @@
-- name: add vpn users (ignore errors)
+#- name: add vpn users (ignore errors)
+#  become: true
+#  become_user: root
+#  command: "{{ softether_dir }}/vpncmd /SERVER 127.0.0.1 /HUB:default /CMD {{ item }}"
+#  loop:
+#    - UserCreate {{ vpn_user }} /GROUP:none /REALNAME:none /NOTE:none
+#    - UserPasswordSet {{ vpn_user }} /PASSWORD:{{ vpn_pass }}
+#  ignore_errors: true
+
+- name: "Create user {{ item.name }}"
   become: true
   become_user: root
   command: "{{ softether_dir }}/vpncmd /SERVER 127.0.0.1 /HUB:default /CMD {{ item }}"
   loop:
-    - UserCreate {{ vpn_user }} /GROUP:none /REALNAME:none /NOTE:none
-    - UserPasswordSet {{ vpn_user }} /PASSWORD:{{ vpn_pass }}
-  ignore_errors: true
+   - UserCreate {{ vpn_user }} /GROUP:none /REALNAME:none /NOTE:none
+   - UserPasswordSet {{ vpn_user }} /PASSWORD:{{ vpn_pass }}
+  with_items:
+    - "{{ users }}"
+  ignore_errors: yes
+
+
 
 - name: enable L2TP over IPsec
   become: true
